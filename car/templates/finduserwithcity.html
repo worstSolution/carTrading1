@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Search people by city: </h1>
+	<form action = '.'>
+		{{ form.as_p }}
+		<input type="text" placeholder="Enter a city" ="Search" name="q"/>
+		<input type="submit" value="Search"/>
+	</form>
+	{% for person in people_list %}
+		<p> <a href="/people/{{ person.user_id }}"> {{ person.user_id }} - {{ person.last_name }} {{ person.first_name }} </a></p>
+	{% endfor %}
+{% endblock %}

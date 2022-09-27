@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> All car: </h1>
+	{% for car in car_list %}
+		<p> {{ car.car_id }} - {{ car.brand }} - {{ car.condition }} - {{ car.year }} - {{ car.gearbox }} - {{ car.brand }} - {{ car.price }}$ - For sale: {{ car.for_sale }} - Owner: <a href="/people/{{ car.owner.user_id }}"> {{ car.owner.last_name }} {{ car.owner.first_name }} </a> </p>
+	{% endfor %}
+{% endblock %}

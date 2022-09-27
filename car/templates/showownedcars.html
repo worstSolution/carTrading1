@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Search car by owner id: </h1>
+	<form action = '.'>
+		{{ form.as_p }}
+		<input type="text" placeholder="Enter a user id" ="Search" name="q"/>
+		<input type="submit" value="Search"/>
+	</form>
+	{% for car in car_list %}
+		<p> {{ car.brand }} - {{ car.condtion }} - {{ car.year }} - {{ car.gearbox }} - {{ car.price }} - {{ car.description }}</p>
+	{% endfor %}
+{% endblock %}

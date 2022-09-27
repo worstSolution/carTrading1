@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Add user: </h1>
+	<form action = '.', method = 'POST'> {% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Save" name="p"/>
+	</form>
+	{% if inserted %}
+	<p> Success! User id created is {{ user_id_created.user_id__max }}. </p>
+	{% endif %}
+{% endblock %}

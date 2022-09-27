@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Search car by gearbox type and condition: </h1>
+	<form action = '.'>
+		{{ form.as_p }}
+		<input type="text" placeholder="Enter gearbox type (manual or auto)" ="Search" name="q1"/>
+		<input type="text" placeholder="Enter condition (old or new)" ="Search" name="q2"/>
+		<input type="submit" value="Search"/>
+	</form>
+	{% for car in car_list %}
+		<p> <a href="/car/{{ car.car_id }}">{{ car.car_id }} </a> - {{ car.brand }} - {{ car.condition }} - {{ car.year }} - {{ car.gearbox }} - {{ car.brand }} - {{ car.price }}$ - For sale: {{ car.for_sale }} </p>
+	{% endfor %}
+{% endblock %}

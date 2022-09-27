@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> User detail: </h1>
+	<p> {{ people.user_id }} - {{ people.last_name }} {{ people.first_name }} - {{ people.dob }} - {{ people.sex }} - {{ people.address }} - {{ people.phone_number }} - {{ people.coin }} - So xe da ban: {{ sold_car.countsoldcars }} - So xe da mua: {{ bought_car.countboughtcars }} - So xe so huu: {{ own_car.countownedcars }} </p>
+{% endblock %}

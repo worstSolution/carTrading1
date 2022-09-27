@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Search transaction by seller id: </h1>
+	<form action = '.'>
+		{{ form.as_p }}
+		<input type="number" placeholder="Enter seller id" name="q"/>
+		<input type="submit" value="Search"/>
+	</form>
+	{% for trans in trans_list %}
+		<p> Transaction id: {{ trans.trans_id }} - Buyer: <a href="/people/{{ trans.buyer_id }}"> {{ trans.buyer_name }} </a> - Seller: <a href="/people/{{ trans.seller_id }}"> {{ trans.seller_name }} </a> - Car: <a href="/car/{{ trans.car_id }}"> {{ trans.brand }} </a> - Transaction time: {{ trans.trans_time }} </p>
+	{% endfor %}
+	{% if trans_list == None and query != None %}
+		<p>	Transaction id does not exist! </p>
+	{% endif %}
+{% endblock %}

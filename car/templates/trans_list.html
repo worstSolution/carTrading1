@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> All transaction: </h1>
+	{% for trans in trans_list %}
+		<p> Transaction id: {{ trans.trans_id }} - Buyer: <a href="/people/{{ trans.buyer.user_id }}"> {{ trans.buyer.last_name }} {{ trans.buyer.first_name }} </a> - Seller: <a href="/people/{{ trans.seller.user_id }}"> {{ trans.seller.last_name }} {{ trans.seller.first_name }} </a> - Car: <a href="/car/{{ trans.car.car_id }}"> {{ trans.car.brand }} </a> - Transaction time: {{ trans.trans_time }} </p>
+	{% endfor %}
+{% endblock %}

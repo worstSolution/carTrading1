@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Search transaction by seller name: </h1>
+	<form action = '.'>
+		{{ form.as_p }}
+		<input type="text" placeholder="Enter a name" name="q"/>
+		<input type="submit" value="Search"/>
+	</form>
+	{% if trans_list != None %}
+	{% for trans in trans_list %}
+		<p> Transaction id: {{ trans.trans_id }} - Buyer: <a href="/people/{{ trans.buyer.user_id }}"> {{ trans.buyer.last_name }} {{ trans.buyer.first_name }} </a> - Seller: <a href="/people/{{ trans.seller.user_id }}"> {{ trans.seller.last_name }} {{ trans.seller.first_name }} </a> - Car: <a href="/car/{{ trans.car.car_id }}"> {{ trans.car.car_brand }} </a> - Transaction time: {{ trans.trans_time }} </p>
+	{% endfor %}
+	{% endif %}
+{% endblock %}

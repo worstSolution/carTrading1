@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> All buyed user: </h1>
+	{% for buyer in buyer_list %}
+		<p> <a href="/people/{{ buyer.user_id }}"> {{ buyer.username }} </a> - Bought {{ buyer.number_of_bought_cars }} cars </p>
+	{% endfor %}
+{% endblock %}

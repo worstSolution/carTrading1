@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Make transaction: </h1>
+	<form action = '.', method = 'POST'> {% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Save" name="p"/>
+	</form>
+	{% if transacted %}
+	<p> Success! Transaction id created is {{ trans_id_created.trans_id__max }}. </p>
+	{% endif %}
+{% endblock %}

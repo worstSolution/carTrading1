@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Welcome to car trading website </h1>
+	<p> Danh sach:  </p>
+	<ol>
+		<li> <a href="/people-list"> Danh sach nguoi dung </a></li>
+		<li> <a href="/car-list"> Danh sach xe </a></li>
+		<li> <a href="/trans-list"> Danh sach giao dich </a></li>
+		<li> <a href="/show_list_buyer"> Danh sach nguoi mua </a></li>
+		<li> <a href="/show_list_seller"> Danh sach nguoi ban </a></li>
+	</ol>
+	<p> Chuc nang:  </p>
+	<ol>
+		<li> <a href="/people-insert"> Them nguoi dung moi </a></li>
+		<li> <a href="/car-insert"> Them xe moi </a></li>
+		<li> <a href="/updatecoin"> Nap tien </a></li>	
+		<li> <a href="/make-transaction"> Thuc hien giao dich </a></li>	
+	</ol>
+	<p> Tim kiem nguoi dung:  </p>
+	<ol>
+		<li> <a href="/people-name-search"> Tim kiem nguoi dung theo ten </a></li>
+		<li> <a href="/finduserwithage"> Tim kiem nguoi dung theo tuoi </a></li>
+		<li> <a href="/finduserwithcity"> Tim kiem nguoi dung theo thanh pho </a></li>
+	</ol>
+	<p> Tim kiem xe:  </p>
+	<ol>
+		<li> <a href="/findsalecar"> Tim tat ca xe dang ban </a></li>
+		<li> <a href="/car-brand-search"> Tim kiem xe theo hang </a></li>
+		<li> <a href="/findcarwithgearbox"> Tim kiem xe theo loai hop so </a></li>
+		<li> <a href="/findcarwithcity"> Tim kiem xe theo thanh pho </a></li>
+		<li> <a href="/findcarwithcondition"> Tim kiem xe theo tinh trang xe </a></li>
+		<li> <a href="/findcarwithyear"> Tim kiem xe theo nam san xuat </a></li>
+		<li> <a href="/findcarwithprice"> Tim kiem xe theo gia tien </a></li>
+		<li> <a href="/showownedcars"> Tim kiem xe theo id nguoi ban </a></li>
+		<li> <a href="/findcarwithgearboxandcondition"> Tim kiem tich hop theo loai hop so va tinh trang xe </a></li>
+		<li> <a href="/findcarwithpriceandgearbox"> Tim kiem tich hop theo gia tien va loai hop so </a></li>
+	</ol>
+	<p> Tim kiem hoa don giao dich:  </p>
+	<ol>
+		<li> <a href="/trans-id-search"> Tim kiem hoa don giao dich theo ma giao dich </a></li>
+		<li> <a href="/findtranswithdate"> Tim kiem hoa don giao dich theo thoi gian </a></li>
+		<li> <a href="/trans-buyer-name-search"> Tim kiem hoa don giao dich theo ten nguoi mua </a></li>
+		<li> <a href="/trans-seller-name-search"> Tim kiem hoa don giao dich theo ten nguoi ban </a></li>
+		<li> <a href="/findselltrans"> Tim kiem hoa don giao dich theo id nguoi ban </a></li>
+		<li> <a href="/findtranswithcarid"> Tim kiem hoa don giao dich theo id xe giao dich </a></li>
+	</ol>
+	<br><br>
+	<h2> Made by Chi Thanh, Hieu Do and Hieu Ta </h2>
+{% endblock %}

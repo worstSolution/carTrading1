@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Search car by price: </h1>
+	<form action = '.'>
+		{{ form.as_p }}
+		<input type="number" placeholder="Enter user id" ="Search" name="q1"/>
+		<input type="number" placeholder="Enter coin added into account" ="Search" name="q2"/>
+		<input type="submit" value="Submit"/>
+	</form>
+	{% if check %}
+		<p> Success! </p>
+	{% endif %}
+{% endblock %}

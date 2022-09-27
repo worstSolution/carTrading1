@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1> Search car by price range: </h1>
+	<form action = '.'>
+		{{ form.as_p }}
+		<input type="number" placeholder="Enter a price1" ="Search" name="q1"/>
+		<input type="number" placeholder="Enter a price2" ="Search" name="q2"/>
+		<input type="submit" value="Search"/>
+	</form>
+	{% for car in car_list %}
+		<p> {{ car.car_id }} - {{ car.brand }} - {{ car.condition }} - {{ car.year }} - {{ car.gearbox }} - {{ car.brand }} - {{ car.price }} - For sale: {{ car.for_sale }} - Owner: <a href="/people/{{ car.owner.user_id }}"> {{ car.owner.last_name }} {{ car.owner.first_name }} </a> </p>
+	{% endfor %}
+{% endblock %}
